@@ -16,5 +16,22 @@ namespace formasGeo.Views
         {
             InitializeComponent();
         }
+
+        private void Button_calcular(object sender, EventArgs e)
+        {
+            try
+            {
+                double baset = Double.Parse(txt_base.Text);
+                double altura = Double.Parse(txt_altura.Text);
+                double areaTriangulo =(baset * altura)/2;
+                resultado.Text = "A área do circulo é de " + areaTriangulo.ToString(("0.00"));
+                resultado.TextColor = Color.Aquamarine;
+                resultado.HorizontalTextAlignment = TextAlignment.Center;
+            }
+            catch (Exception ex)
+            {
+                resultado.Text = "Houve um erro! \n" + ex.Message;
+            }
+        }
     }
 }

@@ -4,10 +4,57 @@
              x:Class="formasGeo.Views.Circulo"
              Title="Circulo">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Circulo"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="#3e474c">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0"
+                       CornerRadius="10"
+                       BackgroundColor="#ea131f"
+                       Margin="10,0,10,0">
+
+                <StackLayout>
+                    <Entry x:Name="txt_raio"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Wheat"
+                           FontAttributes="Bold"
+                           Margin="20"
+                           MaxLength="8"
+                           Placeholder="Coloque o raio do circulo aqui"
+                           PlaceholderColor="White"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1"
+                       CornerRadius="10"
+                       BackgroundColor="#ea131f"
+                       Margin="10,0,10,0">
+                <StackLayout>
+                    <Button Text="Calcular"
+                                Style="{StaticResource ButtonVermelhoMenu}"
+                                Clicked="Button_calcular"/>
+                </StackLayout>
+
+            </Frame>
+
+            <Frame Grid.Row="2"
+                           CornerRadius="10"
+                           BackgroundColor="#ea131f"
+                           Margin="10,0,10,0">
+                <StackLayout>
+                    <Label
+                        x:Name="resultado"
+                        HorizontalTextAlignment="Center"
+                           TextColor="Wheat"
+                           FontAttributes="Bold"
+                           Margin="20"/>  
+                </StackLayout>
+
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
