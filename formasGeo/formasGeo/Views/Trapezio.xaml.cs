@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace formasGeo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Circulo : ContentPage
+    public partial class Trapezio : ContentPage
     {
-        public Circulo()
+        public Trapezio()
         {
             InitializeComponent();
         }
@@ -21,13 +21,17 @@ namespace formasGeo.Views
         {
             try
             {
-                double raio = Double.Parse(txt_raio.Text);
-                double areaCirculo = 3.14 * (raio * raio);
-                resultado.Text = "A área do circulo é de " + areaCirculo.ToString(("0.00"));
+                double baseMaior = Double.Parse(txt_baseMaior.Text);
+                double baseMenor = Double.Parse(txt_baseMenor.Text);
+                double altura = Double.Parse(txt_altura.Text);
+
+
+                double areaTrapezio = (baseMaior + baseMenor) * altura / 2;
+                resultado.Text = "A área do Trapezio é de " + areaTrapezio.ToString(("0.00"));
                 resultado.TextColor = Color.Black;
                 resultado.HorizontalTextAlignment = TextAlignment.Center;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 resultado.Text = "Houve um erro! \n" + ex.Message;
             }

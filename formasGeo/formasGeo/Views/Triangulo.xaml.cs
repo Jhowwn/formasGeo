@@ -24,8 +24,8 @@ namespace formasGeo.Views
                 double baset = Double.Parse(txt_base.Text);
                 double altura = Double.Parse(txt_altura.Text);
                 double areaTriangulo =(baset * altura)/2;
-                resultado.Text = "A área do circulo é de " + areaTriangulo.ToString(("0.00"));
-                resultado.TextColor = Color.Aquamarine;
+                resultado.Text = "A área do triangulo é de " + areaTriangulo.ToString(("0.00"));
+                resultado.TextColor = Color.Black;
                 resultado.HorizontalTextAlignment = TextAlignment.Center;
             }
             catch (Exception ex)

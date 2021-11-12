@@ -11,12 +11,12 @@
             </Style>
 
             <Style x:Key="Titulo" TargetType="Label">
-                <Setter Property="TextColor" Value="#e80000"/>
+                <Setter Property="TextColor" Value="#2E86DA"/>
                 <Setter Property="FontSize" Value="40"/>
             </Style>
 
             <Style x:Key="ButtonVermelhoMenu" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#e80000"/>
+                <Setter Property="BackgroundColor" Value="#2E86DA"/>
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="MinimumHeightRequest" Value="150"/>
                 <Setter Property="FontSize" Value="20"/>
@@ -25,11 +25,14 @@
                 <Setter Property="VerticalOptions" Value="Fill"/>
             </Style>
 
-            <Style x:Key="ButtonPosters" TargetType="ImageButton">
-                <Setter Property="Aspect" Value="Fill"/>
-                <Setter Property="BorderColor" Value="#e80000"/>
-                <Setter Property="BorderWidth" Value="1"/>
-                <Setter Property="CornerRadius" Value="10"/>
+            <Style x:Key="ButtonCalc" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#333"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="MinimumHeightRequest" Value="150"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BorderRadius" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
             </Style>
 
         </ResourceDictionary>

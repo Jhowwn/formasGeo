@@ -75,5 +75,35 @@ namespace formasGeo
                 Console.WriteLine(ex.StackTrace);
             }
         }
+
+        private async void Button_trapezio(object sender, EventArgs e)
+        {
+            try
+            {
+                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Views.Trapezio)));
+                IsPresented = false;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, Deu Erro", ex.Message, "OK");
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
+        private async void Button_losango(object sender, EventArgs e)
+        {
+            try
+            {
+                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Views.Losango)));
+                IsPresented = false;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, Deu Erro", ex.Message, "OK");
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
     }
 }

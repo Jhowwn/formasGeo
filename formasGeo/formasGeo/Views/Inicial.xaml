@@ -4,10 +4,41 @@
              x:Class="formasGeo.Views.Inicial"
              Title="Initial Page">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Initial Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid BackgroundColor="#3e474c">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0"
+                       CornerRadius="10"
+                       BackgroundColor="#ccc"
+                       Margin="10,100,10,10">
+
+                <StackLayout>
+                    <Label Grid.Row="1"
+                           Margin="10,20,10,0"
+                           Text="Seja Bem Vindo!"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Black"
+                           FontAttributes="Bold"/>
+
+                    <Label Margin="10,0,10,0"
+                           Text="Ao Aplicativo de Cálculo de Formas Geometricas"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Black"
+                           FontAttributes="Bold"/>
+
+                    <Label Margin="10,0,10,20"
+                           Text="Faça cálculo das formas que você precisar"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Black"
+                           FontAttributes="Bold"/>
+
+                </StackLayout>
+
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

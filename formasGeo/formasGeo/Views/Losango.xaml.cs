@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace formasGeo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Circulo : ContentPage
+    public partial class Losango : ContentPage
     {
-        public Circulo()
+        public Losango()
         {
             InitializeComponent();
         }
@@ -21,13 +21,14 @@ namespace formasGeo.Views
         {
             try
             {
-                double raio = Double.Parse(txt_raio.Text);
-                double areaCirculo = 3.14 * (raio * raio);
-                resultado.Text = "A área do circulo é de " + areaCirculo.ToString(("0.00"));
+                double diagonalD = Double.Parse(txt_diagonal1.Text);
+                double diagonald = Double.Parse(txt_diagonal2.Text);
+                double areaLosango = diagonalD * diagonald / 2;
+                resultado.Text = "A área do losango é de " + areaLosango.ToString(("0.00"));
                 resultado.TextColor = Color.Black;
                 resultado.HorizontalTextAlignment = TextAlignment.Center;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 resultado.Text = "Houve um erro! \n" + ex.Message;
             }
